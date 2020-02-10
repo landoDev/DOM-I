@@ -67,8 +67,17 @@ newLink.style.color = 'green';
 navParent.append(newLink);
 
 // ===== CTA Style
+const ctaText = document.querySelector(".cta-text")
+// ctaText.style.display = "flex";
+// ctaText.style.flexDirection = "column";
+// ctaText.style.justifyContent = "center";
+// ctaText.style.alignItems = "center";
+
 let ctaTitle = document.querySelector(".cta-text h1");
+// ctaTitle.style.color = "red";
 ctaTitle.textContent = siteContent["cta"]["h1"];
+// ctaTitle.style.width = "42%";
+// ctaText.style.verticalAlign = "center";
 let ctaButton = document.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
