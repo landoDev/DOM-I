@@ -40,3 +40,25 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// ===== My code starts here
+
+let addLinks = document.querySelectorAll('a');
+console.log(addLinks);
+// linkArray = Array.from(addLinks)
+// linkArray.values("nav");
+
+addLinks.forEach( anchor => {
+    anchor.textContent = siteContent["nav"]["nav-item-1"];
+} );
+
+// ===== CTA Styles
+let ctaTitle = document.querySelector(".cta-text h1");
+ctaTitle.textContent = siteContent["cta"]["h1"];
+// ctaTitle.style.color = "blue";
+let ctaButton = document.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// ===== Main Content Styles 
+
