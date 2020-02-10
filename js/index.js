@@ -47,9 +47,10 @@ let addLinks = document.querySelectorAll('a');
 console.log(addLinks);
 // linkArray = Array.from(addLinks)
 // linkArray.values("nav");
-
+let navItem = 1
 addLinks.forEach( anchor => {
-    anchor.textContent = siteContent["nav"]["nav-item-1"];
+    anchor.textContent = siteContent["nav"]["nav-item-"+ navItem];
+    navItem++;
 } );
 
 // ===== CTA Styles
@@ -60,5 +61,35 @@ let ctaButton = document.querySelector(".cta-text button").textContent = siteCon
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-// ===== Main Content Styles 
+// ===== Main Content Titles 
+let mainContentTitles = document.querySelectorAll(".main-content h4");
+console.log(mainContentTitles)
+let mainTitleArray = Array.from(mainContentTitles);
+console.log(mainTitleArray);
+mainTitleArray[0].textContent = siteContent["main-content"]["features-h4"]
+mainTitleArray[1].textContent = siteContent["main-content"]["about-h4"]
+mainTitleArray[2].textContent = siteContent["main-content"]["services-h4"]
+mainTitleArray[3].textContent = siteContent["main-content"]["vision-h4"]
+
+// ===== Main Content Body
+let mainContentBody = document.querySelectorAll(".main-content p");
+let mainBodyArray = Array.from(mainContentBody);
+mainBodyArray[0].textContent = siteContent["main-content"]["features-content"]
+mainBodyArray[1].textContent = siteContent["main-content"]["about-content"]
+mainBodyArray[2].textContent = siteContent["main-content"]["services-content"]
+mainBodyArray[3].textContent = siteContent["main-content"]["vision-content"]
+
+// ===== Main Content Img
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+
+
+
+
+
+// let featuresBody = document.querySelector(".main-content p");
+// featuresBody.setAttribute('p', siteContent["main-content"]["features-content"])
 
