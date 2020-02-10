@@ -83,6 +83,18 @@ mainBodyArray[3].textContent = siteContent["main-content"]["vision-content"]
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+// ===== Contact/Footer
+
+let contactTitle = document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
+let contactInfo = document.querySelectorAll(".contact p")
+let contactArray = Array.from(contactInfo)
+contactArray[0].textContent = siteContent["contact"]["address"]
+contactArray[1].textContent = siteContent["contact"]["phone"]
+contactArray[2].textContent = siteContent["contact"]["email"]
+
+let footerContent = document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
+
+
 
 
 
