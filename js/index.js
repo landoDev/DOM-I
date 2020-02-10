@@ -43,23 +43,36 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // ===== My code starts here
 
+
+
+// console.log(newLink)
+
+// ===== Nav
 let addLinks = document.querySelectorAll('a');
-console.log(addLinks);
-// linkArray = Array.from(addLinks)
-// linkArray.values("nav");
 let navItem = 1
 addLinks.forEach( anchor => {
+    anchor.style.color = 'green';
     anchor.textContent = siteContent["nav"]["nav-item-"+ navItem];
     navItem++;
 } );
+// Nav Additions //
+const freshLink = document.createElement('a');
+freshLink.textContent = "Developer";
+freshLink.style.color = 'green';
+const navParent = document.querySelector("nav");
+navParent.prepend(freshLink);
+const newLink = document.createElement('a');
+newLink.textContent = "Investors";
+newLink.style.color = 'green';
+navParent.append(newLink);
 
-// ===== CTA Styles
+// ===== CTA Style
 let ctaTitle = document.querySelector(".cta-text h1");
 ctaTitle.textContent = siteContent["cta"]["h1"];
-// ctaTitle.style.color = "blue";
 let ctaButton = document.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
 let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
 
 // ===== Main Content Titles 
 let mainContentTitles = document.querySelectorAll(".main-content h4");
